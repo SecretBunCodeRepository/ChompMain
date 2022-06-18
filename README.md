@@ -1,5 +1,7 @@
-## Citadel Station 13
-Based and maintained from /tg/station.
+## ~~Citadel~~ Chomp Station 13
+Based and maintained from ~~/tg/station~~ Citadel Station 13.
+A Study in the parity of two codebases seperated since roughly 2014<sup>(citation needed)</sup>. Porting over maps and eventually features that makes the bread and butter of ChompStation13
+>https://github.com/CHOMPStation2/CHOMPStation2
 
 [![Build Status](https://github.com/Citadel-Station-13/Citadel-Station-13/workflows/CI%20Suite/badge.svg)](https://github.com/Citadel-Station-13/Citadel-Station-13/actions?query=workflow%3A%22CI+Suite%22)
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/Citadel-Station-13/Citadel-Station-13.svg)](http://isitmaintained.com/project/Citadel-Station-13/Citadel-Station-13 "Percentage of issues still open")  
