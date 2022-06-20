@@ -16,7 +16,6 @@ Format:
 endmap
 
 map boxstation
-	default
 	#voteweight 1.5
 endmap
 
@@ -55,4 +54,8 @@ map multiz_debug
 endmap
 
 map kilostation
+endmap
+
+map southerncross
+	default
 endmap

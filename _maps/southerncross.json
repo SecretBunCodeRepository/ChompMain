@@ -1,0 +1,11 @@
+{
+    "map_name": "Southern Cross",
+    "map_path": "map_files/SouthernCross",
+    "map_file": "southern_cross-3.dmm",
+    "shuttles": {
+	    "cargo": "cargo_box",
+	    "ferry": "ferry_fancy",
+	    "whiteship": "whiteship_box",
+	    "emergency": "emergency_box"
+    }
+}

@@ -1,0 +1,14 @@
+-----ATMOS-----
+	SUPPLY AND DISTRO (BAY STYLE)
+	─	/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1
+		/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3
+
+	┌	/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1
+		/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3
+
+	┤	/obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer1
+		/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer3
+
+	┼	/obj/machinery/atmospherics/pipe/manifold4w/supply/hidden/layer1
+		/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer3
+
