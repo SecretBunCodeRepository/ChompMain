@@ -527,6 +527,12 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 						H.physiology.footstep_type = FOOTSTEP_MOB_CLAW
 					if(STYLE_SNEK_TAURIC)
 						H.physiology.footstep_type = FOOTSTEP_MOB_CRAWL
+					if(STYLE_ARACHNID_TAURIC)
+						if(!istype(H.dna.species,/datum/species/arachnid))
+							var/datum/action/innate/spin_web/SW = new
+							var/datum/action/innate/spin_cocoon/SC = new
+							SC.Grant(H)
+							SW.Grant(H)
 					else
 						H.physiology.footstep_type = null
 			else
@@ -601,6 +607,13 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 
 	if((TRAIT_ROBOTIC_ORGANISM in inherent_traits) && C.hud_used)
 		C.hud_used.coolant_display.clear()
+
+	if(ishuman(C))
+		var/mob/living/carbon/human/H = C
+		var/datum/action/innate/spin_web/SW = locate(/datum/action/innate/spin_web) in H.actions
+		var/datum/action/innate/spin_cocoon/SC = locate(/datum/action/innate/spin_cocoon) in H.actions
+		SC?.Remove(H)
+		SW?.Remove(H)
 
 	SEND_SIGNAL(C, COMSIG_SPECIES_LOSS, src)
 
@@ -828,13 +841,13 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 				var/left_state = DEFAULT_LEFT_EYE_STATE
 				var/right_state = DEFAULT_RIGHT_EYE_STATE
 				if(eye_type in GLOB.eye_types)
-					left_state = eye_type + "_left_eye"
-					right_state = eye_type + "_right_eye"
+					left_state = "[eye_type]_left_eye"
+					right_state = "[eye_type]_right_eye"
 				var/mutable_appearance/left_eye = mutable_appearance('icons/mob/eyes.dmi', left_state, -BODY_LAYER)
 				var/mutable_appearance/right_eye = mutable_appearance('icons/mob/eyes.dmi', right_state, -BODY_LAYER)
 				if((EYECOLOR in species_traits) && has_eyes)
-					left_eye.color = "#" + H.left_eye_color
-					right_eye.color = "#" + H.right_eye_color
+					left_eye.color = "#[H.left_eye_color]"
+					right_eye.color = "#[H.right_eye_color]"
 				if(OFFSET_EYES in offset_features)
 					left_eye.pixel_x += offset_features[OFFSET_EYES][1]
 					left_eye.pixel_y += offset_features[OFFSET_EYES][2]
